@@ -15,19 +15,10 @@ const Home = ({ navigation }) => {
           <Text style={styles.actionText}>👤 Profile</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity 
-          style={styles.actionBtn}
-          onPress={() => navigation.navigate('Search')}
-        >
-          <Text style={styles.actionText}>🔍 Search</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.actionBtn}>
-          <Text style={styles.actionText}>⚙️ Settings</Text>
-        </TouchableOpacity>
        
+        
       </View>
-      
+      <Text style={{marginTop:'15', fontSize:18, fontWeight:400, color:"red"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur accusantium qui dignissimos. Placeat, laborum quae reprehenderit magni incidunt ullam deserunt dolores eveniet nisi, ut temporibus quaerat, hic eius. Praesentium animi tempora aliquam placeat odit officiis voluptatibus fugiat, assumenda labore exercitationem aliquid ab repellat aspernatur impedit nam. Voluptatem praesentium esse porro fugiat nam voluptatum laudantium, possimus quam suscipit. Quis error, asperiores numquam molestiae adipisci fugiat rerum eum, laboriosam maxime consectetur, necessitatibus officia itaque atque? Officiis mollitia placeat quasi quod est, laborum nihil ratione amet error dolor nam accusantium, reprehenderit quis ut, nemo dolorum! Voluptate dolore dicta facilis ipsum cum, dolor odio?</Text>
     </ScrollView>
   );
 };
