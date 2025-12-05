@@ -2,7 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View, ScrollView, Image } from 'rea
 import React from 'react'
 
 export default function Profile({navigation, route}) {
-  const { name , id , email } = route?.params || {};
+  const { name="Shamim Hossain" , id="1212" , email="shamimhossain@gmail.com" } = route?.params || {};
   console.log(route.params,'routerouteroute')
 
   return (
