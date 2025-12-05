@@ -10,7 +10,7 @@ const Home = ({ navigation }) => {
       <View style={styles.actionBox}>
         <TouchableOpacity 
           style={styles.actionBtn}
-          onPress={() => navigation.navigate('Profile')}
+          onPress={() => navigation.navigate('Profile',{name:"MD. Shamim Hossain",id:100,email:"shamim515419@gmail.com"})}
         >
           <Text style={styles.actionText}>👤 Profile</Text>
         </TouchableOpacity>
