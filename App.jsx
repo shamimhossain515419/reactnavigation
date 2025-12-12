@@ -4,25 +4,26 @@ import Profile from './src/screens/Profile';
 import About from './src/screens/About';
 import Search from './src/screens/Search';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
-function MyTabs() {
+function MyDrawer() {
   return (
-    <Tab.Navigator
+    <Drawer.Navigator
       screenOptions={{
-        tabBarStyle: {
+        drawerStyle: {
           backgroundColor: '#1a1a2e',
-          borderTopWidth: 0,
-          elevation: 8,
-          height: 60,
-          paddingBottom: 8,
+          width: 240,
         },
-        tabBarActiveTintColor: '#00d4ff',
-        tabBarInactiveTintColor: '#6c757d',
+        drawerActiveTintColor: '#00d4ff',
+        drawerInactiveTintColor: '#6c757d',
+        drawerLabelStyle: {
+          fontSize: 16,
+          fontWeight: '600',
+        },
         headerStyle: {
           backgroundColor: '#16213e',
           elevation: 0,
@@ -35,12 +36,12 @@ function MyTabs() {
         },
       }}
     >
-      <Tab.Screen 
+      <Drawer.Screen 
         name="Home"
         component={Home}
         options={{
           title: 'Home',
-          tabBarIcon: ({ color, size, focused }) => (
+          drawerIcon: ({ color, size, focused }) => (
             <AntDesign 
               name="home" 
               size={focused ? 26 : 24} 
@@ -49,12 +50,12 @@ function MyTabs() {
           ),
         }}
       />
-      <Tab.Screen 
+      <Drawer.Screen 
         name="Search" 
         component={Search}
         options={{
           title: 'Search',
-          tabBarIcon: ({ color, size, focused }) => (
+          drawerIcon: ({ color, size, focused }) => (
             <Feather 
               name="search" 
               size={focused ? 26 : 24} 
@@ -63,12 +64,12 @@ function MyTabs() {
           ),
         }}
       />
-      <Tab.Screen 
+      <Drawer.Screen 
         name="Profile" 
         component={Profile}
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color, size, focused }) => (
+          drawerIcon: ({ color, size, focused }) => (
             <AntDesign 
               name="user" 
               size={focused ? 26 : 24} 
@@ -77,12 +78,12 @@ function MyTabs() {
           ),
         }}
       />
-      <Tab.Screen 
+      <Drawer.Screen 
         name="About" 
         component={About}
         options={{
           title: 'About',
-          tabBarIcon: ({ color, size, focused }) => (
+          drawerIcon: ({ color, size, focused }) => (
             <Feather 
               name="info" 
               size={focused ? 26 : 24} 
@@ -91,14 +92,14 @@ function MyTabs() {
           ),
         }}
       />
-    </Tab.Navigator>
+    </Drawer.Navigator>
   );
 }
 
 const App = () => {
   return (
     <NavigationContainer>
-      <MyTabs />
+      <MyDrawer />
     </NavigationContainer>
   );
 };
